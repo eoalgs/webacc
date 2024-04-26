@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="icon" href="https://th.bing.com/th/id/OIP.1K4hw9Z9RY0gFHk0lak3LgHaJV?w=147&h=184&c=7&r=0&o=5&dpr=1.4&pid=1.7" type="image/x-icon"/>
+    <title>Shop eFootball Lâm Anh</title>
+    <header> 
+        <h5 class="left"> Admin: Lâm Lâm Anh</h5>
+        <div class="header">
+            <h1>Shop eFootball Lâm Anh</h1>
+        </div>
+        <h5 class="right">Hotline: 0399999999 (24/7)</h5>
+    </header>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: url('https://th.bing.com/th/id/R.3254e12a35333f5e49c691d7f48ec3eb?rik=gufNiGF%2bbA1pBg&pid=ImgRaw&r=0') no-repeat center center fixed; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        h6 {
+            color: #000000;
+            font-size: xx-large;
+            text-shadow: 2px 2px 4px #ffffff;
+            text-decoration: underline;
+            text-decoration-color: #000000;
+            margin: 20px; 
+            padding: 10px;
+        }
+        .header {
+            text-align: center;
+            padding: 10px;
+            color: rgb(42, 229, 98);
+            text-shadow: 2px 2px 4px #000000;
+        }
+        header {
+            color: yellow;
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-shadow: 2px 2px 4px #ff0000;
+            text-align: center;
+        }
+        h2 p {
+            color: #d9ff00;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            max-width: 1000px;
+            transition: transform 0.3s ease-in-out;
+            
+        }
+        .card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px #000;
+            margin: 10px;
+            width: 100px;
+            padding: 10px;
+            text-align: center;
+        }
+        .card:hover {
+            box-shadow: 0px 0px 20px 0px #000;
+            transform: scale(1.05);
+        }
+        @keyframes rainbow {
+            0% {color: red;}
+            14% {color: orange;}
+            28% {color: yellow;}
+            42% {color: lime;}
+            57% {color: blue;}
+            71% {color: indigo;}
+            85% {color: rgb(0, 145, 255);}
+            100% {color: red;}
+        }
+        h1 {
+            animation-name: rainbow;
+            animation-duration: 0.6s;
+            animation-iteration-count: infinite;
+        }
+        h6 {
+            animation-name: rainbow;
+            animation-duration: 0.6s;
+            animation-iteration-count: infinite;
+        }
+        h4 {
+            animation-name: rainbow;
+            animation-duration: 0.6s;
+            animation-iteration-count: infinite;
+        }
+        button {
+            background-color: #dc3636;
+            border: none;
+            color: white;
+            padding: 10px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 8px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ffffff;
+            color: #dc3636;
+            border: 1px solid #dc3636;
+        }
+        h3 {
+            font-size: small;
+            color: #2a67ea;
+        }
+        .left {
+            text-align: left;
+        }
+        .right {
+            text-align: top right;
+        }
+        .center {
+            text-align: center;
+        }
+        footer {
+            background: #43494a;
+            padding: 5px;
+            text-align: right;
+        }
+        .grid_column_4 {
+            padding-left: 5px;
+            padding-right: 5px;
+            width: 25%;
+        }
+        p {
+            color: #1fc659;
+            font-size: small;
+        }
+        p footer{
+            color: #ffffff;
+            font-size: small;
+        }
+        h2 {
+            color: #dfff2c;
+            font-size: medium;
+        }
+        h4{
+            color: #090909;
+            font-size: smaller;
+        }
+        .menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .menu ul li {
+            display: inline-block;
+        }
+
+        .menu ul li a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .menu ul li a:hover {
+            background-color: #ffffff;
+            color: #000;
+        }
+        .menu .active {
+            background-color: #ffffff;
+            color: #000;
+        }
+        .cart {
+            text-align: right;
+            font-size: 100%;
+        }
+        .cart a {
+            color: inherit;
+            text-decoration: none;
+        }
+        
+        .cart a:hover {
+            color: #f9f9f9;
+        }
+        .pagination {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .pagination a {
+            color: #9dff00;
+            display: inline-block;
+            padding: 8px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            -webkit-text-stroke: 0.6px rgb(232, 253, 73);
+        }
+          
+        .pagination a:hover {
+            background-color: #c4ff03;
+        }
+          
+        .pagination .active {
+            background-color: #b3ff00;
+            color: rgb(0, 0, 0);
+        }
+        .centered-text {
+            color: #0099ff;
+            font-size: large;
+            text-align: center;
+            -webkit-text-stroke: 0.4px white;
+        }
+        @keyframes moveRightToLeft {
+            0% {
+                transform: translateX(100%);
+                color: rgb(45, 202, 255);
+            }
+            14% {color: orange;}
+            28% {color: yellow;}
+            42% {color: lime;}
+            57% {color: blue;}
+            71% {color: indigo;}
+            85% {color: rgb(0, 145, 255);}
+            100% {
+                transform: translateX(-100%);
+                color: white;
+            }
+        }
+        
+        .movetext p {
+            font-size: 20px;
+            white-space: nowrap;
+            margin: 0;
+            transform-origin: 0 0;
+            animation: moveRightToLeft 30s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="movetext">
+        <p>Shop acc uy tín số 1 Việt Nam</p>
+    </div>
+    <div class="cart">
+        <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&pp=ygUJcmljayByb2xs">
+            <i class="fa-solid fa-cart-shopping"></i>Giỏ Hàng
+        </a>
+    </div>
+    <div class="menu">
+        <ul>
+            <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&pp=ygUJcmljayByb2xs" class="active">Trang Chủ</a></li>
+            <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&pp=ygUJcmljayByb2xs">Nạp Vip</a></li>
+            <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&pp=ygUJcmljayByb2xs">Mua Pass</a></li>
+            <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&pp=ygUJcmljayByb2xs">Acc Game</a></li>
+            <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&pp=ygUJcmljayByb2xs">Cày Thuê</a></li>
+            <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&pp=ygUJcmljayByb2xs">Đăng Nhập</a></li>
+            <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&pp=ygUJcmljayByb2xs">Đăng Ký</a></li>
+        </ul>
+    </div><br>
+    <h6 class="center">Acc Game</h6>
+    <div class="search-container" style="float: right;">
+        <input list="site-search" name="q"
+               aria-label="Search through site content"
+               placeholder="Tìm Kiếm Sản Phẩm">
+        <datalist id="site-search">
+            <option value="Từ A - Z">
+            <option value="Rẻ Nhất">
+            <option value="Đắt Nhất">  
+            <option value="Bán Chạy"> 
+            <option value="Có Ronaldo"> 
+            <option value="Không Có Messi"> 
+        </datalist>
+        <button>Tìm</button>
+    </div>
+    <br><br><br>
+    <div class="container">
+        <div class="card">
+            <h3>Mân Đàn</h3>
+            <img src="https://hali.vn/wp-content/uploads/2020/01/logo-MU.jpg" alt="vip1" width="80px">
+            <h4>1k</h4>
+            <button onclick="showCartInfo()">Xem Trước</button>
+            <button>Múc Luôn</button>
+        </div>
+        <div class="card">
+            <h3>Chân Đen Sì</h3>
+            <img src="https://th.bing.com/th/id/OIP.hCH2Mk7c8yj6iRHNXmWXBAHaHa?w=180&h=180&c=7&r=0&o=5&dpr=1.4&pid=1.7" alt="vip1" width="50px">
+            <h4>150k</h4>
+            <button>Xem Trước</button>
+            <button>Múc Luôn</button>
+        </div>
+        <div class="card">
+            <h3>Rân An Đì</h3>
+            <img src="https://th.bing.com/th/id/R.c741810f9c33cf1dcc57c99d72e0a88f?rik=cpqlbe4biPOuAA&riu=http%3a%2f%2fwww.freelogovectors.net%2fwp-content%2fuploads%2f2018%2f03%2freal_madrid_cub_de_futbol-logo.png&ehk=0leBxEk7hblAGXb64NVnUz83tfO1n%2bVtT9C3rBadqUM%3d&risl=&pid=ImgRaw&r=0" alt="vip1" width="50px">
+            <h4>100k</h4>
+            <button>Xem Trước</button>
+            <button>Múc Luôn</button>
+        </div>
+        <div class="card">
+            <h3>Bấc Xa Đàn</h3>
+            <img src="https://th.bing.com/th/id/OIP.Y27A3eP6MRvzlggD7ZUPMwHaEo?w=292&h=182&c=7&r=0&o=5&dpr=1.4&pid=1.7" alt="vip1" width="90px">
+            <h4>150k</h4>
+            <button>Xem Trước</button>
+            <button>Múc Luôn</button>
+        </div>
+        <div class="card">
+            <h3>Mân Xanh Đàn</h3>
+            <img src="https://th.bing.com/th/id/OIP.SwT_VqaPuVNrP11KVxdGDAHaEK?w=300&h=180&c=7&r=0&o=5&dpr=1.4&pid=1.7" alt="vip1" width="80px">
+            <h4>100k</h4>
+            <button>Xem Trước</button>
+            <button>Múc Luôn</button>
+        </div>
+        <div class="card">
+            <h3>Phấn Đào</h3>
+            <img src="https://th.bing.com/th/id/OIP.ZcfZJ1bDBaYNfA8mK0SlXQHaEo?w=238&h=180&c=7&r=0&o=5&dpr=1.4&pid=1.7" alt="vip1" width="80px">
+            <h4>150k</h4>
+            <button>Xem Trước</button>
+            <button>Múc Luôn</button>
+        </div>
+        <div class="card">
+            <h3>Lân Vơ Đì</h3>
+            <img src="https://th.bing.com/th/id/R.ed3620e10f791a5b1ab1eb866b00741b?rik=6b3fuhIKNM%2f48A&pid=ImgRaw&r=0" alt="vip1" width="100px">
+            <h4>150k</h4>
+            <button>Xem Trước</button>
+            <button>Múc Luôn</button>
+        </div>
+    </div>
+    <br>
+    <div class="pagination">
+        <a href="#">&laquo;&laquo;</a>
+        <a href="#">&laquo;</a>
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">...</a>
+        <a href="#">10</a>
+        <a href="#">&raquo;</a> 
+        <a href="#">&raquo;&raquo;</a>
+      </div>
+    <h6 class="center">Nạp Vip</h6>
+    <h2 class="centered-text">Bảng Giá Tham Khảo</h2>
+    <div style="display: flex; justify-content: center;">
+        <img src="ảnh/bảng giá game.png" alt="vip1" width="50%"> 
+    </div><br><br><br><br>
+    <h6 class="center">Mua Pass</h6>
+    <h2 class="centered-text">Bảng Giá Tham Khảo</h2><br><br>
+    <div style="display: flex; justify-content: center;">
+        <img src="ảnh/bảng giá pass.png" alt="vip1" width="30%">
+    </div><br><br><br><br>
+    <h6 class="center">Cày Thuê</h6>
+    <h2 class="centered-text">Bảng Giá Tham Khảo</h2><br><br>
+    <div style="display: flex; justify-content: center;">
+        <img src="ảnh/bảng giá cày thuê.png" alt="vip1" width="50%">
+    </div><br><br><br><br>
+    <footer>
+        <h2 class="left"> Về Shop Lâm Anh:</h2>
+        <p class="left"> Shop acc uy tín top 1 thị trường, 10 điểm không nhưng</p>
+        <p class="left"> Email: trumluadaovn15@gmail.com</p>
+        <p class="left"> Group:<a href="https://www.facebook.com/groups/259458808641306/" target="_blank">https://www.facebook.com/groups/259458808641306/</a> </p>
+        <p class="right"> QR để vào Group! </p>
+        <img src="ảnh/group.jpeg" width="15%">
+        <audio id="myAudio" controls style="float: left;">
+            <source src="ảnh/videoplayback.m4a" type="audio/mp4">
+        </audio>
+    </footer>
+</body>
+</html>
