@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="icon" href="https://th.bing.com/th/id/OIP.1K4hw9Z9RY0gFHk0lak3LgHaJV?w=147&h=184&c=7&r=0&o=5&dpr=1.4&pid=1.7" type="image/x-icon"/>
     <title>Shop eFootball Lâm Anh</title>
+
     <header> 
         <h5 class="left"> Admin: Lâm Lâm Anh</h5>
         <div class="header">
@@ -13,251 +15,20 @@
         </div>
         <h5 class="right">Hotline: 0399999999 (24/7)</h5>
     </header>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: url('https://th.bing.com/th/id/R.3254e12a35333f5e49c691d7f48ec3eb?rik=gufNiGF%2bbA1pBg&pid=ImgRaw&r=0') no-repeat center center fixed; 
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-        }
-        h6 {
-            color: #000000;
-            font-size: xx-large;
-            text-shadow: 2px 2px 4px #ffffff;
-            text-decoration: underline;
-            text-decoration-color: #000000;
-            margin: 20px; 
-            padding: 10px;
-        }
-        .header {
-            text-align: center;
-            padding: 10px;
-            color: rgb(42, 229, 98);
-            text-shadow: 2px 2px 4px #000000;
-        }
-        header {
-            color: yellow;
-            padding: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            text-shadow: 2px 2px 4px #ff0000;
-            text-align: center;
-        }
-        h2 p {
-            color: #d9ff00;
-        }
-        .container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin: 0 auto;
-            max-width: 1000px;
-            transition: transform 0.3s ease-in-out;
-            
-        }
-        .card {
-            background-color: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px 0px #000;
-            margin: 10px;
-            width: 100px;
-            padding: 10px;
-            text-align: center;
-        }
-        .card:hover {
-            box-shadow: 0px 0px 20px 0px #000;
-            transform: scale(1.05);
-        }
-        @keyframes rainbow {
-            0% {color: red;}
-            14% {color: orange;}
-            28% {color: yellow;}
-            42% {color: lime;}
-            57% {color: blue;}
-            71% {color: indigo;}
-            85% {color: rgb(0, 145, 255);}
-            100% {color: red;}
-        }
-        h1 {
-            animation-name: rainbow;
-            animation-duration: 0.6s;
-            animation-iteration-count: infinite;
-        }
-        h6 {
-            animation-name: rainbow;
-            animation-duration: 0.6s;
-            animation-iteration-count: infinite;
-        }
-        h4 {
-            animation-name: rainbow;
-            animation-duration: 0.6s;
-            animation-iteration-count: infinite;
-        }
-        button {
-            background-color: #dc3636;
-            border: none;
-            color: white;
-            padding: 10px 10px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 8px;
-            margin: 4px 2px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #ffffff;
-            color: #dc3636;
-            border: 1px solid #dc3636;
-        }
-        h3 {
-            font-size: small;
-            color: #2a67ea;
-        }
-        .left {
-            text-align: left;
-        }
-        .right {
-            text-align: top right;
-        }
-        .center {
-            text-align: center;
-        }
-        footer {
-            background: #43494a;
-            padding: 5px;
-            text-align: right;
-        }
-        .grid_column_4 {
-            padding-left: 5px;
-            padding-right: 5px;
-            width: 25%;
-        }
-        p {
-            color: #1fc659;
-            font-size: small;
-        }
-        p footer{
-            color: #ffffff;
-            font-size: small;
-        }
-        h2 {
-            color: #dfff2c;
-            font-size: medium;
-        }
-        h4{
-            color: #090909;
-            font-size: smaller;
-        }
-        .menu ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #333;
-            display: flex;
-            justify-content: space-around;
-        }
 
-        .menu ul li {
-            display: inline-block;
-        }
-
-        .menu ul li a {
-            display: inline-block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-
-        .menu ul li a:hover {
-            background-color: #ffffff;
-            color: #000;
-        }
-        .menu .active {
-            background-color: #ffffff;
-            color: #000;
-        }
-        .cart {
-            text-align: right;
-            font-size: 100%;
-        }
-        .cart a {
-            color: inherit;
-            text-decoration: none;
-        }
-        
-        .cart a:hover {
-            color: #f9f9f9;
-        }
-        .pagination {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .pagination a {
-            color: #9dff00;
-            display: inline-block;
-            padding: 8px 16px;
-            text-decoration: none;
-            transition: background-color 0.3s;
-            -webkit-text-stroke: 0.6px rgb(232, 253, 73);
-        }
-          
-        .pagination a:hover {
-            background-color: #c4ff03;
-        }
-          
-        .pagination .active {
-            background-color: #b3ff00;
-            color: rgb(0, 0, 0);
-        }
-        .centered-text {
-            color: #0099ff;
-            font-size: large;
-            text-align: center;
-            -webkit-text-stroke: 0.4px white;
-        }
-        @keyframes moveRightToLeft {
-            0% {
-                transform: translateX(100%);
-                color: rgb(45, 202, 255);
-            }
-            14% {color: orange;}
-            28% {color: yellow;}
-            42% {color: lime;}
-            57% {color: blue;}
-            71% {color: indigo;}
-            85% {color: rgb(0, 145, 255);}
-            100% {
-                transform: translateX(-100%);
-                color: white;
-            }
-        }
-        
-        .movetext p {
-            font-size: 20px;
-            white-space: nowrap;
-            margin: 0;
-            transform-origin: 0 0;
-            animation: moveRightToLeft 30s linear infinite;
-        }
-    </style>
 </head>
 <body>
+
     <div class="movetext">
         <p>Shop acc uy tín số 1 Việt Nam</p>
     </div>
+
     <div class="cart">
         <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&pp=ygUJcmljayByb2xs">
             <i class="fa-solid fa-cart-shopping"></i>Giỏ Hàng
         </a>
     </div>
+
     <div class="menu">
         <ul>
             <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&pp=ygUJcmljayByb2xs" class="active">Trang Chủ</a></li>
@@ -269,7 +40,9 @@
             <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&pp=ygUJcmljayByb2xs">Đăng Ký</a></li>
         </ul>
     </div><br>
+
     <h6 class="center">Acc Game</h6>
+
     <div class="search-container" style="float: right;">
         <input list="site-search" name="q"
                aria-label="Search through site content"
@@ -282,65 +55,99 @@
             <option value="Có Ronaldo"> 
             <option value="Không Có Messi"> 
         </datalist>
-        <button>Tìm</button>
+        <button>Tìm Kiếm</button>
     </div>
-    <br><br><br>
+
+    <div id="xemtruocModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h3>Xem trước sản phẩm</h3>
+          <img src="ảnh/accpes.jpg" alt="vip1" width="99%">
+          <div class="modal-actions">
+            <button id="btnThemVaoGio">Thêm Vào Giỏ</button>
+            <button id="btnHuy">Hủy</button>
+          </div>
+        </div>
+    </div>
+
+    <div id="muaLuonModal" class="modal">
+        <div class="modal-content">
+          <span class="closes">&times;</span>
+          <h3>Xác nhận mua hàng</h3>
+          <p>Bạn có muốn mua acc này?</p>
+          <div class="center">
+            <img src="ảnh/qrcode.png" alt="vip1" width="22%">
+          </div>
+          <p class="center">MỜI BẠN CHUYỂN KHOẢN, NỘI DUNG LÀ GMAIL NHẬN ACC</p>
+          <div class="modal-actions">
+            <button id="btnOk">Thanh Toán</button>
+            <button id="btnThoat">Hủy</button>
+          </div>
+        </div>
+    </div><br><br><br>
+
     <div class="container">
         <div class="card">
             <h3>Mân Đàn</h3>
             <img src="https://hali.vn/wp-content/uploads/2020/01/logo-MU.jpg" alt="vip1" width="80px">
-            <h4>1k</h4>
-            <button onclick="showCartInfo()">Xem Trước</button>
-            <button>Múc Luôn</button>
+            <h4>99k</h4>
+            <button id="btnXemTruoc">Xem Trước</button>
+            <button id="btnMuaLuon">Múc Luôn</button>
         </div>
+
         <div class="card">
             <h3>Chân Đen Sì</h3>
             <img src="https://th.bing.com/th/id/OIP.hCH2Mk7c8yj6iRHNXmWXBAHaHa?w=180&h=180&c=7&r=0&o=5&dpr=1.4&pid=1.7" alt="vip1" width="50px">
-            <h4>150k</h4>
-            <button>Xem Trước</button>
-            <button>Múc Luôn</button>
+            <h4>149k</h4>
+            <button id="btnXemTruoc">Xem Trước</button>
+            <button id="btnMuaLuon">Múc Luôn</button>
         </div>
+
         <div class="card">
             <h3>Rân An Đì</h3>
             <img src="https://th.bing.com/th/id/R.c741810f9c33cf1dcc57c99d72e0a88f?rik=cpqlbe4biPOuAA&riu=http%3a%2f%2fwww.freelogovectors.net%2fwp-content%2fuploads%2f2018%2f03%2freal_madrid_cub_de_futbol-logo.png&ehk=0leBxEk7hblAGXb64NVnUz83tfO1n%2bVtT9C3rBadqUM%3d&risl=&pid=ImgRaw&r=0" alt="vip1" width="50px">
-            <h4>100k</h4>
-            <button>Xem Trước</button>
-            <button>Múc Luôn</button>
+            <h4>199k</h4>
+            <button id="btnXemTruoc">Xem Trước</button>
+            <button id="btnMuaLuon">Múc Luôn</button>
         </div>
+
         <div class="card">
             <h3>Bấc Xa Đàn</h3>
             <img src="https://th.bing.com/th/id/OIP.Y27A3eP6MRvzlggD7ZUPMwHaEo?w=292&h=182&c=7&r=0&o=5&dpr=1.4&pid=1.7" alt="vip1" width="90px">
-            <h4>150k</h4>
-            <button>Xem Trước</button>
-            <button>Múc Luôn</button>
+            <h4>129k</h4>
+            <button id="btnXemTruoc">Xem Trước</button>
+            <button id="btnMuaLuon">Múc Luôn</button>
         </div>
+        
         <div class="card">
             <h3>Mân Xanh Đàn</h3>
             <img src="https://th.bing.com/th/id/OIP.SwT_VqaPuVNrP11KVxdGDAHaEK?w=300&h=180&c=7&r=0&o=5&dpr=1.4&pid=1.7" alt="vip1" width="80px">
-            <h4>100k</h4>
-            <button>Xem Trước</button>
-            <button>Múc Luôn</button>
+            <h4>189k</h4>
+            <button id="btnXemTruoc">Xem Trước</button>
+            <button id="btnMuaLuon">Múc Luôn</button>
         </div>
+
         <div class="card">
             <h3>Phấn Đào</h3>
             <img src="https://th.bing.com/th/id/OIP.ZcfZJ1bDBaYNfA8mK0SlXQHaEo?w=238&h=180&c=7&r=0&o=5&dpr=1.4&pid=1.7" alt="vip1" width="80px">
-            <h4>150k</h4>
-            <button>Xem Trước</button>
-            <button>Múc Luôn</button>
+            <h4>109k</h4>
+            <button id="btnXemTruoc">Xem Trước</button>
+            <button id="btnMuaLuon">Múc Luôn</button>
         </div>
+
         <div class="card">
             <h3>Lân Vơ Đì</h3>
             <img src="https://th.bing.com/th/id/R.ed3620e10f791a5b1ab1eb866b00741b?rik=6b3fuhIKNM%2f48A&pid=ImgRaw&r=0" alt="vip1" width="100px">
-            <h4>150k</h4>
-            <button>Xem Trước</button>
-            <button>Múc Luôn</button>
+            <h4>89k</h4>
+            <button id="btnXemTruoc">Xem Trước</button>
+            <button id="btnMuaLuon">Múc Luôn</button>
         </div>
-    </div>
-    <br>
+    </div><br>
+
     <div class="pagination">
         <a href="#">&laquo;&laquo;</a>
         <a href="#">&laquo;</a>
-        <a href="#" class="active">1</a>
+        <a href="#"class="active">1</a>
         <a href="#">2</a>
         <a href="#">3</a>
         <a href="#">4</a>
@@ -349,23 +156,49 @@
         <a href="#">10</a>
         <a href="#">&raquo;</a> 
         <a href="#">&raquo;&raquo;</a>
-      </div>
+    </div>
+
     <h6 class="center">Nạp Vip</h6>
+
     <h2 class="centered-text">Bảng Giá Tham Khảo</h2>
+
     <div style="display: flex; justify-content: center;">
         <img src="ảnh/bảng giá game.png" alt="vip1" width="50%"> 
     </div><br><br><br><br>
+
     <h6 class="center">Mua Pass</h6>
+
     <h2 class="centered-text">Bảng Giá Tham Khảo</h2><br><br>
+
     <div style="display: flex; justify-content: center;">
         <img src="ảnh/bảng giá pass.png" alt="vip1" width="30%">
     </div><br><br><br><br>
+
     <h6 class="center">Cày Thuê</h6>
+
     <h2 class="centered-text">Bảng Giá Tham Khảo</h2><br><br>
+
     <div style="display: flex; justify-content: center;">
         <img src="ảnh/bảng giá cày thuê.png" alt="vip1" width="50%">
     </div><br><br><br><br>
+
+    <h6 class="center">Vòng Quay May Mắn</h6>
+
+    <button id="spin">Play</button>
+    <span class="arrow"></span>
+    <div class="wapper">
+        <div class="one"><span>Bạn Quá Đen</span></div>
+        <div class="two"><span>Nhận Ronaldo</span></div>
+        <div class="three"><span>+1 Lượt Quay</span></div>
+        <div class="four"><span>-500k Tài Khoản</span></div>
+        <div class="five"><span>Free Một Gói Bất Kỳ</span></div>
+        <div class="six"><span>Bạn Quá Đen</span></div>
+        <div class="seven"><span>Free Một Acc Bất Kỳ</span></div>
+        <div class="eight"><span>Chữ Ký Của Ronaldo</span></div>
+    </div>
+
     <footer>
+
         <h2 class="left"> Về Shop Lâm Anh:</h2>
         <p class="left"> Shop acc uy tín top 1 thị trường, 10 điểm không nhưng</p>
         <p class="left"> Email: trumluadaovn15@gmail.com</p>
@@ -375,6 +208,497 @@
         <audio id="myAudio" controls style="float: left;">
             <source src="ảnh/videoplayback.m4a" type="audio/mp4">
         </audio>
+        <p>&copy; 2024 Shop eFootball Lâm Anh. By GOAT 7</p>
+
     </footer>
+
+    <style>
+
+        body{
+            margin: 0;
+            background-size: cover;
+            -o-background-size: cover;
+            -moz-background-size: cover;
+            -webkit-background-size: cover;
+            font-family: Arial, sans-serif;
+            background: url('https://th.bing.com/th/id/R.3254e12a35333f5e49c691d7f48ec3eb?rik=gufNiGF%2bbA1pBg&pid=ImgRaw&r=0') no-repeat center center fixed; 
+        }
+
+        h6{
+            margin: 20px; 
+            padding: 10px;
+            color: #000000;
+            font-size: xx-large;
+            text-decoration: underline;
+            text-decoration-color: #000000;
+            text-shadow: 2px 2px 4px #ffffff;
+        }
+
+        .header{
+            padding: 10px;
+            text-align: center;
+            color: rgb(42, 229, 98);
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        header{
+            padding: 5px;
+            display: flex;
+            color: yellow;
+            text-align: center;
+            align-items: center;
+            justify-content: space-between;
+            text-shadow: 2px 2px 4px #ff0000;
+        }
+
+        h2 p{
+            color: #d9ff00;
+        }
+
+        .container{
+            display: flex;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            justify-content: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card{
+            width: 100px;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+            background-color: #ffffff;
+            box-shadow: 0px 0px 10px 0px #000;
+        }
+
+        .card:hover{
+            transform: scale(1.05);
+            box-shadow: 0px 0px 20px 0px #000;
+        }
+
+        @keyframes rainbow{
+            0% {color: red;}
+            14% {color: orange;}
+            28% {color: yellow;}
+            42% {color: lime;}
+            57% {color: blue;}
+            71% {color: indigo;}
+            85% {color: rgb(0, 145, 255);}
+            100% {color: red;}
+        }
+
+        h1{
+            animation-name: rainbow;
+            animation-duration: 0.6s;
+            animation-iteration-count: infinite;
+        }
+        
+        h6{
+            animation-name: rainbow;
+            animation-duration: 0.6s;
+            animation-iteration-count: infinite;
+        }
+        
+        h4{
+            animation-name: rainbow;
+            animation-duration: 0.6s;
+            animation-iteration-count: infinite;
+        }
+
+        button{
+            border: none;
+            color: white;
+            font-size: 8px;
+            margin: 4px 2px;
+            cursor: pointer;
+            padding: 10px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            background-color: #dc3636;
+        }
+
+        button:hover{
+            color: #dc3636;
+            background-color: #ffffff;
+            border: 1px solid #dc3636;
+        }
+
+        h3{
+            font-size: small;
+            color: #2a67ea;
+        }
+
+        .left{
+            text-align: left;
+        }
+
+        .right{
+            text-align: top right;
+        }
+
+        .center{
+            text-align: center;
+        }
+
+        footer{
+            padding: 5px;
+            text-align: right;
+            background: #43494a;
+        }
+
+        .grid_column_4{
+            width: 25%;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        p{
+            color: #1fc659;
+            font-size: small;
+        }
+
+        p footer{
+            color: #ffffff;
+            font-size: small;
+        }
+
+        h2{
+            color: #dfff2c;
+            font-size: medium;
+        }
+
+        h4{
+            color: #090909;
+            font-size: smaller;
+        }
+
+        .menu ul{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            overflow: hidden;
+            list-style-type: none;
+            background-color: #333;
+            justify-content: space-around;
+        }
+
+        .menu ul li{
+            display: inline-block;
+        }
+
+        .menu ul li a{
+            color: white;
+            transition: 0.3s;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .menu ul li a:hover{
+            color: #000;
+            background-color: #ffffff;
+        }
+        .menu .active{
+            color: #000;
+            background-color: #ffffff;
+        }
+
+        .cart{
+            font-size: 100%;
+            text-align: right;
+        }
+
+        .cart a{
+            color: inherit;
+            text-decoration: none;
+        }
+        
+        .cart a:hover{
+            color: #f9f9f9;
+        }
+
+        .pagination{
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .pagination a{
+            color: #9dff00;
+            padding: 8px 16px;
+            display: inline-block;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            -webkit-text-stroke: 0.6px rgb(232, 253, 73);
+        }
+          
+        .pagination a:hover{
+            background-color: #c4ff03;
+        }
+          
+        .pagination .active{
+            color: rgb(0, 0, 0);
+            background-color: #b3ff00;
+        }
+
+        .centered-text{
+            color: #0099ff;
+            font-size: large;
+            text-align: center;
+            -webkit-text-stroke: 0.4px white;
+        }
+
+        @keyframes moveRightToLeft{
+            0%{
+                transform: translateX(100%);
+                color: rgb(45, 202, 255);
+            }
+            14%{color: orange;}
+            28%{color: yellow;}
+            42%{color: lime;}
+            57%{color: blue;}
+            71%{color: indigo;}
+            85%{color: rgb(0, 145, 255);}
+            100%{
+                transform: translateX(-100%);
+                color: white;
+            }
+        }
+        
+        .movetext p{
+            margin: 0;
+            font-size: 20px;
+            white-space: nowrap;
+            transform-origin: 0 0;
+            animation: moveRightToLeft 30s linear infinite;
+        }
+
+        .wapper{
+            width: 400px;
+            height: 400px;
+            transition: 5s;
+            overflow: hidden;
+            position: relative;
+            border-radius: 50%;
+            background-color: #ccc;
+            border: 5px solid #dde;
+        }
+
+        .wapper div{
+            height: 50%;
+            left: 116px;
+            width: 168px;
+            display: flex;
+            color: #fff;
+            line-height: 1;
+            font-size: 15px;
+            overflow: hidden;
+            position: absolute;
+            text-align: center;
+            justify-content: center;
+            font-family: sans-serif;
+            transform-origin: bottom;
+            transform: translate(-50%);
+            clip-path: polygon(100% 0, 50% 100%, 0 0);
+        }
+
+        .wapper div span{
+            padding: 17px;
+            display: block;
+            white-space: nowrap;
+        }
+
+        .wapper .one{
+            left: 50%;
+            background-color: #3f51b5;
+        }
+        
+        .wapper .two{
+            background-color: #3f5;
+            transform: rotate(45deg);
+        }
+
+        .wapper .three{
+            transform: rotate(90deg);
+            background-color: rgb(159, 159, 61);
+        }
+        
+        .wapper .four{
+            transform: rotate(135deg);
+            background-color: rosybrown;
+        }
+
+        .wapper .five{
+            transform: rotate(180deg);
+            background-color: rebeccapurple;
+        }
+
+        .wapper .six{
+            background-color: blue;
+            transform: rotate(225deg);
+        }
+
+        .wapper .seven{
+            background-color: red;
+            transform: rotate(270deg);
+        }
+
+        .wapper .eight{
+            transform: rotate(315deg);
+            background-color: orange;
+        }
+
+        .arrow{
+            top: 10px;
+            left: 11%;
+            color: #fff;
+            position: relative;
+            transform: translate(-50%);
+        }
+
+        .arrow::before{
+            font-size: 50px;
+            content: "\1F817";
+        }
+
+        #spin{
+            top: 291px;
+            z-index: 99;
+            left: 200px;
+            width: 80px;
+            height: 80px;
+            font-size: 20px;
+            cursor: pointer;
+            color: #a2a2a2;
+            font-weight: bold;
+            position: relative;
+            border-radius: 50%;
+            letter-spacing: 1px;
+            font-family: sans-serif;
+            border: solid 8px #fff;
+            background-color: #e2e2e2;
+            transform: translate(-50%, -50%);
+        }
+
+        .modal{
+            top: 0;
+            left: 0;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            display: none;
+            overflow: auto;
+            position: fixed;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content{
+            width: 80%;
+            padding: 20px;
+            margin: 15% auto;
+            border: 1px solid #888;
+            background-color: #fefefe;
+        }
+
+        .close{
+            float: right;
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus{
+            color: black;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .closes{
+            float: right;
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .closes:hover,
+        .closes:focus{
+            color: black;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .modal-actions{
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .modal{
+            display: none;
+        }
+
+    </style>
+
+    <script>
+        let btn = document.getElementById("spin");
+        let number  = Math.ceil(Math.random() * 5000);
+        let container = document.querySelector(".wapper");
+
+        btn.onclick = function(){
+            container.style.transform = "rotate("+number+"deg)";
+            number += Math.ceil(Math.random() * 5000);
+        }
+
+        var btnOk = document.getElementById('btnOk');
+        var btnHuy = document.getElementById('btnHuy');
+        var btntat = document.querySelector('.closes');
+        var btnClose = document.querySelector('.close');
+        var btnThoat = document.getElementById('btnThoat');
+        var btnMuaLuon = document.getElementById('btnMuaLuon');
+        var btnXemTruoc = document.getElementById('btnXemTruoc');
+        var muaLuonModal = document.getElementById('muaLuonModal');
+        var xemtruocModal = document.getElementById('xemtruocModal');
+        var btnThemVaoGio = document.getElementById('btnThemVaoGio');
+        
+        btnMuaLuon.addEventListener('click', function() {
+        muaLuonModal.style.display = 'block';
+        });
+
+        btnXemTruoc.addEventListener('click', function() {
+        xemtruocModal.style.display = 'block';
+        });
+
+        btnThemVaoGio.addEventListener('click', function() {
+        alert('Bạn đã thêm thành công sản phẩm vào giỏ hàng!');
+        xemtruocModal.style.display = 'none';
+        });
+
+        btnClose.addEventListener('click', function() {
+        xemtruocModal.style.display = 'none';
+        });
+
+        btntat.addEventListener('click', function() {
+        muaLuonModal.style.display = 'none';
+        });
+
+        btnHuy.addEventListener('click', function() {
+        xemtruocModal.style.display = 'none';
+        });
+
+        btnThoat.addEventListener('click', function() {
+        muaLuonModal.style.display = 'none';
+        });
+
+        btnOk.addEventListener('click', function() {
+        alert('BẠN CHƯA ĐĂNG NHẬP, HÃY ĐĂNG NHẬP HOẶC ĐĂNG KÝ!');
+        muaLuonModal.style.display = 'none';
+        });
+
+    </script>
+
 </body>
 </html>
