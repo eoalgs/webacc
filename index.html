@@ -24,7 +24,7 @@
     </div>
 
     <div class="cart">
-        <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&pp=ygUJcmljayByb2xs">
+        <a href="https://eoalgs.github.io/webacc/">
             <h4>Giỏ Hàng</h4>
             <i class="fa-solid fa-cart-shopping"></i>
         </a>
@@ -32,15 +32,21 @@
 
     <div class="menu">
         <ul>
-            <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&pp=ygUJcmljayByb2xs" class="active">Trang Chủ</a></li>
-            <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&pp=ygUJcmljayByb2xs">Nạp Vip</a></li>
-            <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&pp=ygUJcmljayByb2xs">Mua Pass</a></li>
-            <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&pp=ygUJcmljayByb2xs">Acc Game</a></li>
-            <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&pp=ygUJcmljayByb2xs">Cày Thuê</a></li>
-            <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&pp=ygUJcmljayByb2xs">Đăng Nhập</a></li>
-            <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&pp=ygUJcmljayByb2xs">Đăng Ký</a></li>
+            <li><a href="https://eoalgs.github.io/webacc/" class="active">Trang Chủ</a></li>
+            <li><a href="https://eoalgs.github.io/webacc/">Nạp Vip</a></li>
+            <li><a href="https://eoalgs.github.io/webacc/">Mua Pass</a></li>
+            <li><a href="https://eoalgs.github.io/webacc/">Acc Game</a></li>
+            <li><a href="https://eoalgs.github.io/webacc/">Cày Thuê</a></li>
+            <li><a id="Login" class="login">Đăng Nhập</a></li>
+            <li><a class="logout">Đăng Xuất</a></li>
         </ul>
     </div><br>
+
+    <div id="accountInfo">
+        <p id="usernameDisplay">vnam</p>
+        <p id="balance">Số Dư: 5.000.000 VND</p>
+        <button id="paymentButton">Nạp Tiền</button>
+    </div>
 
     <h6 class="center">Acc Game</h6>
 
@@ -61,6 +67,18 @@
         <button>Tìm Kiếm</button>
     </div>
 
+    <div id="dangnhapmodal" class="loginmodal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h3>Đăng Nhập</h3>
+            <input type="text" placeholder="Tên Đăng Nhập" id="username">
+            <input type="password" placeholder="Mật Khẩu" id="password">
+            <button id="btnDangNhap">Đăng Nhập</button>
+            <button id="btnDangKy">Đăng Ký</button>
+            <button id="btnQuenMk">Quên Mật Khẩu</button>
+        </div>
+    </div>
+
     <div id="xemtruocModal" class="modal">
         <div class="modal-content">
           <span class="close">&times;</span>
@@ -77,17 +95,27 @@
         <div class="modal-content">
           <span class="closes">&times;</span>
           <h3>Xác nhận mua hàng</h3>
-          <p>Bạn có muốn mua acc này?</p>
-          <div class="center">
-            <img src="ảnh/qrcode.png" alt="vip1" width="22%">
-          </div>
-          <p class="center">MỜI BẠN CHUYỂN KHOẢN, NỘI DUNG LÀ GMAIL NHẬN ACC</p>
+          <p class="center">BẠN CÓ MUỐN MUA ACC NÀY?</p>
+          <p class="center">KHI NHẤN VÀO NÚT THANH TOÁN, 
+            BẠN SẼ NHẬN ĐƯỢC ACC, MỌI SAI SÓT ĐỀU KHÔNG ĐƯỢC XỬ LÝ, 
+            HÃY CÂN NHẮC THẬT KỸ TRƯỚC KHI THANH TOÁN</p>
           <div class="modal-actions">
             <button id="btnOk">Thanh Toán</button>
             <button id="btnThoat">Hủy</button>
           </div>
         </div>
     </div><br><br><br>
+
+    <div id="thanhtoanmodal" class="modal">
+        <div class="modal-content">
+          <span class="closes">&times;</span>
+          <h3 class="center">NẠP THÊM TIỀN VÀO TÀI KHOẢN</h3>
+          <div class="center">
+            <img src="ảnh/qrcode.png" alt="vip1" width="22%">
+          </div>
+          <p class="center">MỜI BẠN CHUYỂN KHOẢN, NỘI DUNG LÀ ID TÀI KHOẢN, CHỜ ÍT PHÚT ĐỂ NHẬN TIỀN</p>
+        </div>
+    </div>
 
     <div class="container">
         <div class="card">
@@ -410,8 +438,10 @@
         }
 
         .menu ul li a:hover{
-            color: #000;
-            background-color: #ffffff;
+            background-color: #ddd;
+            color: black;
+            cursor: pointer;
+            border-radius: 5px;
         }
         .menu .active{
             color: #000;
@@ -592,7 +622,6 @@
         }
 
         #spin{
-            
             top: 291px;
             z-index: 99;
             left: 487px;
@@ -668,16 +697,105 @@
             display: none;
         }
 
+        .loginmodal{
+            top: 50%;
+            left: 50%;
+            z-index: 0;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            position: fixed;
+            text-align: center;
+            border-radius: 1px;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        #username, #password {
+            border-radius: 20px;
+            text-align: center;
+            display: block;
+            width: 97%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        #btnDangNhap,#btnDangKy, #btnQuenMk {
+            margin: 10px;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+        }
+
+        #btnDangNhap:hover, #btnDangKy:hover, #btnQuenMk:hover {
+            color: black;
+            cursor: pointer;
+            border-radius: 5px;
+            background-color: #ddd;
+        }
+
+        #Login:hover {
+            color: black;
+            cursor: pointer;
+            border-radius: 5px;
+            background-color: #ddd;
+        }
+
+        #accountInfo {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            display: none;
+            background-color: #000000;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        #usernameDisplay {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+        #balance {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        
+        #paymentButton {
+            display: block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        #paymentButton:hover {
+            background-color: #45a049;
+        }        
+
     </style>
 
     <script>
-        let btn = document.getElementById("spin");
-        let number  = Math.ceil(Math.random() * 5000);
-        let container = document.querySelector(".wapper");
 
+        //Xu ly vong quay
+
+        let btn = document.getElementById("spin");
+        let number = 0;
+        let container = document.querySelector(".wapper");
+        
         btn.onclick = function(){
+            let random = Math.random();
+            number += Math.ceil(random * 5000);
             container.style.transform = "rotate("+number+"deg)";
-            number += Math.ceil(Math.random() * 5000);
         }
 
         var btnOk = document.getElementById('btnOk');
@@ -721,8 +839,89 @@
         });
 
         btnOk.addEventListener('click', function() {
-        alert('BẠN CHƯA ĐĂNG NHẬP, HÃY ĐĂNG NHẬP HOẶC ĐĂNG KÝ!');
+        alert('CẢM ƠN BẠN ĐÃ MUA ACC, CHÚC BẠN CHƠI GAME VUI VẺ!');
         muaLuonModal.style.display = 'none';
+        });
+
+
+        //Xu ly dang nhap
+
+        var Login = document.getElementById('Login');
+        var btnThoat = document.querySelector('.close');
+        var btnDangXuat = document.querySelector('.logout');
+        var modal = document.getElementById('dangnhapmodal');
+        var btnQuenMk = document.getElementById('btnQuenMk');
+        var btnDangNhap = document.getElementById('btnDangNhap');
+        
+        Login.addEventListener('click', function() {
+            modal.style.display = 'block';
+        });
+
+        btnThoat.addEventListener('click', function() {
+            alert('Bạn Phải Đăng Nhập Để Tiếp Tục!');
+        });
+
+        btnDangNhap.addEventListener('click', function() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            if(username == 'vnam' && password == '98200'){
+                alert('Đăng nhập thành công!');
+                modal.style.display = 'none';
+                Login.innerHTML = 'Đăng Xuất';
+                Login.classList.remove('login');
+                Login.classList.add('logout');
+                var username = document.getElementById('username').value;
+                Login.innerHTML = username;
+            }else{
+                alert('Vui Lòng Nhập Đúng Tên Đăng Nhập Và Mật Khẩu!');
+            }
+            document.getElementById('accountInfo').style.display = 'block';
+        });
+
+        btnDangKy.addEventListener('click', function() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            if (username && password) {
+                localStorage.setItem('username', username);
+                localStorage.setItem('password', password);
+                alert('Bạn Đã Đăng Ký Thành Công!');
+                var Login = document.getElementById('Login');
+                Login.innerHTML = 'Đăng Xuất';
+            } else {
+                alert('Vui Lòng Nhập Tên Đăng Nhập Và Mật Khẩu!');
+            }
+        });
+        
+
+        btnQuenMk.addEventListener('click', function() {
+            alert('Bạn Làm Gì Có Mật Khẩu Mà Quên!');
+        });
+
+        btnDangXuat.addEventListener('click', function() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            alert('Đăng Xuất Thành Công!');
+            modal.style.display = 'block';
+            Login.innerHTML = 'Đăng Xuất';
+            Login.classList.remove('login');
+            Login.classList.add('logout');
+            var username = document.getElementById('username').value;
+            Login.innerHTML = username;
+            document.getElementById('accountInfo').style.display = 'none';
+        });
+
+        //Xu ly nap tien
+
+        var thanhtoan = document.getElementById('thanhtoanmodal');
+        var paymentButton = document.getElementById('paymentButton');
+
+        paymentButton.addEventListener('click', function() {
+            thanhtoan.style.display = 'block';
+        });
+
+        thanhtoan.addEventListener('click', function() {
+            thanhtoan.style.display = 'none';
         });
 
     </script>
